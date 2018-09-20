@@ -10,6 +10,10 @@ public class CoffeeBrewer {
         //waterHeater = new WaterHeater(this.water);
     }
 
+    public Water getWater() {
+        return water;
+    }
+
     /*
     public void brewCoffee() {
         waterHeater.on();

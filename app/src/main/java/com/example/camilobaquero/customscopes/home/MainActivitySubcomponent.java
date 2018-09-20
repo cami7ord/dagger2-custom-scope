@@ -8,11 +8,11 @@ import dagger.Subcomponent;
 @Subcomponent(modules = MainActivityModule.class)
 public interface MainActivitySubcomponent {
 
-    MainActivity inject(MainActivity activity);
+    void inject(MainActivity activity);
 
     @Subcomponent.Builder
     interface Builder {
-        MainActivitySubcomponent.Builder mainActivityModule(MainActivityModule mainActivityModule);
+        Builder mainActivityModule(MainActivityModule mainActivityModule);
         MainActivitySubcomponent build();
     }
 
