@@ -2,13 +2,15 @@ package com.example.camilobaquero.customscopes.model;
 
 public class Coffee {
 
+    private final CoffeeBrewer coffeeBrewer;
+    private final Flavor flavor;
+
     public enum Flavor {
         Latte, Americano, Espresso
     }
 
-    public Flavor flavor = Flavor.Espresso;
-
-    public Coffee(Flavor flavor) {
+    public Coffee(CoffeeBrewer coffeeBrewer, Flavor flavor) {
+        this.coffeeBrewer = coffeeBrewer;
         this.flavor = flavor;
     }
 

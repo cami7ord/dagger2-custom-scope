@@ -1,10 +1,11 @@
 package com.example.camilobaquero.customscopes.home;
 
-import com.example.camilobaquero.customscopes.di.ActivityAScope;
+import com.example.camilobaquero.customscopes.di.MainActivityScope;
 
+import dagger.BindsInstance;
 import dagger.Subcomponent;
 
-@ActivityAScope
+@MainActivityScope
 @Subcomponent(modules = MainActivityModule.class)
 public interface MainActivitySubcomponent {
 
@@ -12,6 +13,7 @@ public interface MainActivitySubcomponent {
 
     @Subcomponent.Builder
     interface Builder {
+        @BindsInstance
         Builder mainActivityModule(MainActivityModule mainActivityModule);
         MainActivitySubcomponent build();
     }
